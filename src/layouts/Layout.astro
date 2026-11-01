@@ -1,0 +1,95 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { 
+  title = "Autowider – Real Car Prices, Specs & Comparisons India", 
+  description = "Compare 200+ cars in India with real-time on-road prices, detailed specs, variant comparisons, and unbiased expert auto reviews at Autowider."
+} = Astro.props;
+
+import '../styles/global.css';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+</head>
+<body class="min-h-screen flex flex-col bg-[#F8FAFC] text-[#0F172A] antialiased">
+  
+  <!-- Header / Navigation -->
+  <header class="bg-[#0F172A] text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2 group">
+        <div class="w-9 h-9 rounded-lg bg-[#E63946] flex items-center justify-center font-black text-xl text-white shadow-lg shadow-red-500/30">
+          A
+        </div>
+        <div class="font-extrabold text-2xl tracking-tight text-white">
+          Auto<span class="text-[#E63946]">wider</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+        <a href="/" class="hover:text-white transition">Home</a>
+        <a href="/cars" class="hover:text-white transition">All Cars</a>
+        <a href="/new-cars" class="hover:text-white transition">New Launches</a>
+        <a href="/compare-cars" class="hover:text-white transition">Compare Cars</a>
+        <a href="/upcoming-cars" class="hover:text-white transition">Upcoming</a>
+        <a href="/news" class="hover:text-white transition">Auto News</a>
+      </nav>
+
+      <!-- Action Button -->
+      <div class="flex items-center gap-3">
+        <a href="/compare-cars" class="hidden sm:inline-flex items-center gap-2 bg-[#E63946] hover:bg-red-600 text-white text-xs md:text-sm font-semibold px-4 py-2 rounded-full transition shadow-md shadow-red-500/20">
+          Compare Cars
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Slot for Page Content -->
+  <slot />
+
+  <!-- Global Footer -->
+  <footer class="bg-[#0F172A] text-slate-400 text-xs py-12 border-t border-slate-800 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div>
+        <div class="font-bold text-lg text-white mb-3">Auto<span class="text-[#E63946]">wider</span></div>
+        <p class="text-slate-400 leading-relaxed">India's high-speed automotive portal for real-time car prices, specs, variant comparisons, and expert auto journalism.</p>
+      </div>
+      <div>
+        <h4 class="font-bold text-white mb-3">Popular Brands</h4>
+        <ul class="space-y-2">
+          <li><a href="/hyundai-cars" class="hover:text-white transition">Hyundai Cars</a></li>
+          <li><a href="/tata-cars" class="hover:text-white transition">Tata Motors</a></li>
+          <li><a href="/maruti-suzuki-cars" class="hover:text-white transition">Maruti Suzuki</a></li>
+          <li><a href="/kia-cars" class="hover:text-white transition">Kia Motors</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold text-white mb-3">Quick Navigation</h4>
+        <ul class="space-y-2">
+          <li><a href="/" class="hover:text-white transition">Home</a></li>
+          <li><a href="/compare-cars" class="hover:text-white transition">Comparison Engine</a></li>
+          <li><a href="/upcoming-cars" class="hover:text-white transition">Upcoming Cars</a></li>
+          <li><a href="/news" class="hover:text-white transition">Auto News & Reviews</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold text-white mb-3">About Autowider</h4>
+        <p class="text-slate-400 mb-2">Built for 0-second loading speed, zero build delays, and modern editorial readers.</p>
+        <div class="text-slate-500">© 2026 Autowider.com. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

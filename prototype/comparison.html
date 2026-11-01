@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hyundai Creta vs Kia Seltos vs Maruti Brezza — Car Comparison | Autowider</title>
+  <meta name="description" content="Detailed spec-by-spec comparison of Hyundai Creta 2026, Kia Seltos 2026 and Maruti Brezza 2024. Price, engine, safety, features and user ratings compared." />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#E63946'
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #F8FAFC; color: #0F172A; }
+    .nav-dark { background: #0F172A; }
+    .brand-red { color: #E63946; }
+    .bg-brand-red { background: #E63946; }
+    .border-brand-red { border-color: #E63946; }
+    .winner-cell { background: #F0FDF4; }
+    .loser-cell { background: #FFFFFF; }
+    .tie-cell { background: #EFF6FF; }
+    .winner-text { color: #16A34A; font-weight: 700; }
+    .tie-text { color: #1D4ED8; }
+    .muted-text { color: #64748B; }
+    .accordion-content { transition: max-height 0.35s ease, opacity 0.35s ease; overflow: hidden; }
+    .accordion-content.collapsed { max-height: 0; opacity: 0; }
+    .accordion-content.expanded { max-height: 9999px; opacity: 1; }
+    .chevron { transition: transform 0.3s ease; }
+    .chevron.rotated { transform: rotate(180deg); }
+    .progress-bar-fill { transition: width 0.6s ease; }
+    .share-btn:hover { transform: translateY(-1px); }
+    .compare-card { transition: box-shadow 0.2s ease; }
+    .compare-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.10); }
+    .more-compare-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.08); transform: translateY(-2px); }
+    .more-compare-card { transition: all 0.2s ease; }
+    select { appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748B' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 10px center; }
+    .sticky-nav { position: sticky; top: 0; z-index: 50; }
+    @media (max-width: 767px) {
+      .comp-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+
+<!-- ===================== HEADER / NAV ===================== -->
+<header class="sticky-nav nav-dark shadow-lg">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+    <!-- Logo -->
+    <a href="index.html" class="flex items-center gap-1 shrink-0">
+      <span class="text-white font-black text-xl tracking-tight">Auto</span>
+      <span class="text-brand-red font-black text-xl">●</span>
+      <span class="text-white font-black text-xl tracking-tight">Pulse</span>
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
+      <a href="#" class="hover:text-white transition-colors">News</a>
+      <a href="#" class="hover:text-white transition-colors">Reviews</a>
+      <a href="#" class="text-brand-red font-semibold">Compare</a>
+      <a href="#" class="hover:text-white transition-colors">Prices</a>
+      <a href="#" class="hover:text-white transition-colors">Videos</a>
+      <a href="#" class="hover:text-white transition-colors">EV Hub</a>
+    </nav>
+
+    <!-- Search + CTA -->
+    <div class="hidden md:flex items-center gap-3">
+      <div class="relative">
+        <input type="search" placeholder="Search cars, news…"
+          class="bg-slate-800 text-white placeholder-slate-400 text-sm rounded-full px-4 py-2 pl-9 w-52 focus:outline-none focus:ring-2 focus:ring-brand border border-slate-700" />
+        <svg class="absolute left-3 top-2.5 w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+      </div>
+      <a href="comparison.html" class="bg-brand-red hover:bg-red-700 text-white text-sm font-semibold px-4 py-2 rounded-full transition-colors whitespace-nowrap flex items-center gap-1">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19V6l12-3v13"/><circle cx="6" cy="19" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        Compare
+      </a>
+    </div>
+
+    <!-- Hamburger -->
+    <button id="hamburger-btn" class="md:hidden text-white p-2 rounded-lg hover:bg-slate-800 transition-colors" aria-label="Toggle menu">
+      <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path id="ham-lines" d="M3 12h18M3 6h18M3 18h18"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden nav-dark border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-1">
+      <a href="#" class="text-slate-300 hover:text-white py-2 px-3 rounded-lg hover:bg-slate-800 transition-colors text-sm font-medium">News</a>
+      <a href="#" class="text-slate-300 hover:text-white py-2 px-3 rounded-lg hover:bg-slate-800 transition-colors text-sm font-medium">Reviews</a>
+      <a href="#" class="text-brand-red py-2 px-3 rounded-lg bg-slate-800 text-sm font-semibold">Compare</a>
+      <a href="#" class="text-slate-300 hover:text-white py-2 px-3 rounded-lg hover:bg-slate-800 transition-colors text-sm font-medium">Prices</a>
+      <a href="#" class="text-slate-300 hover:text-white py-2 px-3 rounded-lg hover:bg-slate-800 transition-colors text-sm font-medium">Videos</a>
+      <a href="#" class="text-slate-300 hover:text-white py-2 px-3 rounded-lg hover:bg-slate-800 transition-colors text-sm font-medium">EV Hub</a>
+      <div class="pt-2 pb-1">
+        <input type="search" placeholder="Search cars, news…"
+          class="w-full bg-slate-800 text-white placeholder-slate-400 text-sm rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-brand border border-slate-700" />
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== PAGE HEADER ===================== -->
+<section class="bg-white border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 py-6">
+    <!-- Breadcrumb -->
+    <nav class="flex items-center gap-2 text-xs text-slate-500 mb-4 flex-wrap">
+      <a href="#" class="hover:text-brand-red transition-colors">Home</a>
+      <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+      <a href="#" class="hover:text-brand-red transition-colors">Compare Cars</a>
+      <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+      <span class="text-slate-700 font-medium">Creta vs Seltos vs Brezza</span>
+    </nav>
+
+    <h1 class="text-2xl md:text-3xl lg:text-4xl font-black text-slate-900 leading-tight mb-2">
+      Hyundai Creta vs Kia Seltos vs Maruti Brezza
+    </h1>
+    <p class="text-slate-500 text-sm md:text-base mb-4">Detailed spec-by-spec comparison — Updated November 2026</p>
+
+    <div class="flex flex-wrap items-center gap-3 text-xs text-slate-500 mb-5">
+      <div class="flex items-center gap-1">
+        <svg class="w-3.5 h-3.5 text-brand-red" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        <span>November 1, 2026</span>
+      </div>
+      <span class="text-slate-300">|</span>
+      <div class="flex items-center gap-1">
+        <svg class="w-3.5 h-3.5 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+        <span>Updated daily by Autowider editors</span>
+      </div>
+    </div>
+
+    <!-- Share Buttons -->
+    <div class="flex flex-wrap items-center gap-2">
+      <span class="text-xs font-semibold text-slate-500 uppercase tracking-wide mr-1">Share:</span>
+      <button onclick="shareTwitter()" class="share-btn flex items-center gap-1.5 bg-black text-white text-xs font-semibold px-3 py-1.5 rounded-full transition-all">
+        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.731-8.835L1.254 2.25H8.08l4.261 5.632 5.904-5.632Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        Share
+      </button>
+      <button onclick="shareWhatsApp()" class="share-btn flex items-center gap-1.5 bg-green-600 hover:bg-green-700 text-white text-xs font-semibold px-3 py-1.5 rounded-full transition-all">
+        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        Share
+      </button>
+      <button id="copy-link-btn" onclick="copyLink()" class="share-btn flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold px-3 py-1.5 rounded-full transition-all border border-slate-200">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+        <span id="copy-link-text">Copy Link</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TOP AD SLOT ===================== -->
+<div class="max-w-7xl mx-auto px-4 py-4">
+  <div class="w-full rounded-xl overflow-hidden border border-slate-200 bg-gradient-to-r from-slate-100 to-slate-50" style="height:90px;">
+    <div class="flex items-center justify-center h-full gap-3">
+      <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest border border-slate-300 rounded px-2 py-0.5">Advertisement</span>
+      <span class="text-slate-400 text-sm">728×90 Leaderboard Ad Unit</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== CAR HEADER CARDS ===================== -->
+<section class="max-w-7xl mx-auto px-4 pb-6">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+    <!-- Car A: Hyundai Creta -->
+    <div class="compare-card bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+      <!-- Visual -->
+      <div class="relative" style="height:150px; background: linear-gradient(135deg, #1e3a5f 0%, #2d6a9f 40%, #4a90c4 70%, #7ab3d4 100%);">
+        <!-- Our Pick Badge -->
+        <div class="absolute top-3 right-3 bg-green-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-md flex items-center gap-1">
+          <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Our Pick
+        </div>
+        <!-- Car SVG Silhouette -->
+        <svg class="absolute bottom-4 left-1/2 -translate-x-1/2" width="180" height="70" viewBox="0 0 240 90" fill="none">
+          <ellipse cx="70" cy="78" rx="20" ry="10" fill="rgba(0,0,0,0.3)"/>
+          <ellipse cx="175" cy="78" rx="20" ry="10" fill="rgba(0,0,0,0.3)"/>
+          <path d="M20 65 Q25 65 30 60 L60 30 Q75 18 100 16 L155 16 Q180 16 195 30 L220 60 Q225 65 228 65 L228 72 Q228 76 224 76 L200 76 Q200 68 175 68 Q150 68 150 76 L90 76 Q90 68 70 68 Q50 68 50 76 L20 76 Q16 76 16 72 Z" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+          <rect x="65" y="22" width="115" height="35" rx="8" fill="rgba(255,255,255,0.12)"/>
+          <circle cx="70" cy="76" r="12" fill="#1a1a2e" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <circle cx="70" cy="76" r="6" fill="rgba(255,255,255,0.3)"/>
+          <circle cx="175" cy="76" r="12" fill="#1a1a2e" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <circle cx="175" cy="76" r="6" fill="rgba(255,255,255,0.3)"/>
+        </svg>
+      </div>
+
+      <div class="p-4">
+        <h2 class="text-lg font-black text-slate-900 mb-0.5">Hyundai Creta 2026</h2>
+        <p class="text-xs text-slate-400 mb-3">Compact SUV · Petrol / Diesel · 5 Seater</p>
+
+        <label class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1 block">Select Variant</label>
+        <select id="creta-variant" onchange="updatePrice('creta')"
+          class="w-full bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg px-3 py-2 mb-3 focus:outline-none focus:ring-2 focus:ring-brand pr-8">
+          <option value="11.00">E — ₹11.00 L</option>
+          <option value="13.49">S — ₹13.49 L</option>
+          <option value="14.99">S(O) — ₹14.99 L</option>
+          <option value="16.85" selected>SX — ₹16.85 L</option>
+          <option value="20.15">SX(O) — ₹20.15 L</option>
+        </select>
+
+        <div class="flex items-end justify-between mb-3">
+          <div>
+            <p class="text-xs text-slate-400 mb-0.5">Selected Price</p>
+            <p id="creta-price" class="text-2xl font-black text-slate-900">₹16.85 <span class="text-base font-semibold text-slate-500">Lakh</span></p>
+          </div>
+          <div class="text-right">
+            <p class="text-xs text-slate-400 mb-0.5">Rating</p>
+            <div class="flex items-center gap-1">
+              <span class="text-yellow-400 text-sm">★★★★</span><span class="text-slate-300 text-sm">☆</span>
+              <span class="text-sm font-bold text-slate-700 ml-0.5">4.2/5</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between border-t border-slate-100 pt-3">
+          <span class="text-xs text-slate-400">1,842 Reviews</span>
+          <a href="#" class="text-xs font-semibold text-brand-red hover:underline flex items-center gap-1">
+            Change Car
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Car B: Kia Seltos -->
+    <div class="compare-card bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="relative" style="height:150px; background: linear-gradient(135deg, #2d2d2d 0%, #5a5a6e 40%, #8b8ba8 70%, #b0b0c4 100%);">
+        <svg class="absolute bottom-4 left-1/2 -translate-x-1/2" width="180" height="70" viewBox="0 0 240 90" fill="none">
+          <ellipse cx="70" cy="78" rx="20" ry="10" fill="rgba(0,0,0,0.3)"/>
+          <ellipse cx="175" cy="78" rx="20" ry="10" fill="rgba(0,0,0,0.3)"/>
+          <path d="M18 65 Q22 65 28 60 L55 28 Q72 16 98 15 L158 15 Q185 15 198 29 L222 60 Q226 65 230 65 L230 72 Q230 76 226 76 L200 76 Q200 68 175 68 Q150 68 150 76 L90 76 Q90 68 70 68 Q50 68 50 76 L18 76 Q14 76 14 72 Z" fill="rgba(255,255,255,0.22)" stroke="rgba(255,255,255,0.45)" stroke-width="1.5"/>
+          <rect x="60" y="20" width="120" height="32" rx="7" fill="rgba(255,255,255,0.1)"/>
+          <circle cx="70" cy="76" r="12" fill="#111" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <circle cx="70" cy="76" r="6" fill="rgba(255,255,255,0.3)"/>
+          <circle cx="175" cy="76" r="12" fill="#111" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <circle cx="175" cy="76" r="6" fill="rgba(255,255,255,0.3)"/>
+        </svg>
+      </div>
+
+      <div class="p-4">
+        <h2 class="text-lg font-black text-slate-900 mb-0.5">Kia Seltos 2026</h2>
+        <p class="text-xs text-slate-400 mb-3">Compact SUV · Petrol · 5 Seater</p>
+
+        <label class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1 block">Select Variant</label>
+        <select id="seltos-variant" onchange="updatePrice('seltos')"
+          class="w-full bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg px-3 py-2 mb-3 focus:outline-none focus:ring-2 focus:ring-brand pr-8">
+          <option value="11.59">HTK — ₹11.59 L</option>
+          <option value="13.79">HTK+ — ₹13.79 L</option>
+          <option value="16.50" selected>HTX — ₹16.50 L</option>
+          <option value="18.99">HTX+ — ₹18.99 L</option>
+          <option value="20.90">GTX+ — ₹20.90 L</option>
+        </select>
+
+        <div class="flex items-end justify-between mb-3">
+          <div>
+            <p class="text-xs text-slate-400 mb-0.5">Selected Price</p>
+            <p id="seltos-price" class="text-2xl font-black text-slate-900">₹16.50 <span class="text-base font-semibold text-slate-500">Lakh</span></p>
+          </div>
+          <div class="text-right">
+            <p class="text-xs text-slate-400 mb-0.5">Rating</p>
+            <div class="flex items-center gap-1">
+              <span class="text-yellow-400 text-sm">★★★★</span><span class="text-slate-300 text-sm">☆</span>
+              <span class="text-sm font-bold text-slate-700 ml-0.5">4.1/5</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between border-t border-slate-100 pt-3">
+          <span class="text-xs text-slate-400">1,590 Reviews</span>
+          <a href="#" class="text-xs font-semibold text-brand-red hover:underline flex items-center gap-1">
+            Change Car
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Car C: Maruti Brezza -->
+    <div class="compare-card bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="relative" style="height:150px; background: linear-gradient(135deg, #1a3a2a 0%, #2d6b45 40%, #5a9e72 70%, #8ec4a0 100%);">
+        <svg class="absolute bottom-4 left-1/2 -translate-x-1/2" width="180" height="70" viewBox="0 0 240 90" fill="none">
+          <ellipse cx="70" cy="78" rx="20" ry="10" fill="rgba(0,0,0,0.3)"/>
+          <ellipse cx="175" cy="78" rx="20" ry="10" fill="rgba(0,0,0,0.3)"/>
+          <path d="M22 65 Q26 65 32 60 L62 32 Q78 20 103 18 L148 18 Q175 18 192 32 L218 60 Q222 65 226 65 L226 72 Q226 76 222 76 L200 76 Q200 68 175 68 Q150 68 150 76 L90 76 Q90 68 70 68 Q50 68 50 76 L22 76 Q18 76 18 72 Z" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <rect x="65" y="24" width="112" height="30" rx="7" fill="rgba(255,255,255,0.1)"/>
+          <circle cx="70" cy="76" r="12" fill="#0d1f14" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <circle cx="70" cy="76" r="6" fill="rgba(255,255,255,0.3)"/>
+          <circle cx="175" cy="76" r="12" fill="#0d1f14" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <circle cx="175" cy="76" r="6" fill="rgba(255,255,255,0.3)"/>
+        </svg>
+      </div>
+
+      <div class="p-4">
+        <h2 class="text-lg font-black text-slate-900 mb-0.5">Maruti Brezza 2024</h2>
+        <p class="text-xs text-slate-400 mb-3">Compact SUV · Petrol · 5 Seater</p>
+
+        <label class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1 block">Select Variant</label>
+        <select id="brezza-variant" onchange="updatePrice('brezza')"
+          class="w-full bg-slate-50 border border-slate-200 text-slate-800 text-sm rounded-lg px-3 py-2 mb-3 focus:outline-none focus:ring-2 focus:ring-brand pr-8">
+          <option value="8.34">LXi — ₹8.34 L</option>
+          <option value="10.54">VXi — ₹10.54 L</option>
+          <option value="13.35" selected>ZXi — ₹13.35 L</option>
+          <option value="14.99">ZXi+ — ₹14.99 L</option>
+        </select>
+
+        <div class="flex items-end justify-between mb-3">
+          <div>
+            <p class="text-xs text-slate-400 mb-0.5">Selected Price</p>
+            <p id="brezza-price" class="text-2xl font-black text-slate-900">₹13.35 <span class="text-base font-semibold text-slate-500">Lakh</span></p>
+          </div>
+          <div class="text-right">
+            <p class="text-xs text-slate-400 mb-0.5">Rating</p>
+            <div class="flex items-center gap-1">
+              <span class="text-yellow-400 text-sm">★★★★</span><span class="text-slate-300 text-sm">☆</span>
+              <span class="text-sm font-bold text-slate-700 ml-0.5">4.0/5</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between border-t border-slate-100 pt-3">
+          <span class="text-xs text-slate-400">2,210 Reviews</span>
+          <a href="#" class="text-xs font-semibold text-brand-red hover:underline flex items-center gap-1">
+            Change Car
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== QUICK VERDICT BANNER ===================== -->
+<section class="max-w-7xl mx-auto px-4 pb-6">
+  <div class="rounded-2xl border-l-4 border-brand-red p-5 flex flex-col md:flex-row md:items-center gap-4" style="background:#FFF1F2;">
+    <div class="text-3xl">🏆</div>
+    <div class="flex-1">
+      <div class="flex flex-wrap items-center gap-2 mb-1">
+        <h3 class="font-black text-slate-900 text-lg">Our Pick: Hyundai Creta SX</h3>
+        <span class="bg-green-600 text-white text-xs font-bold px-2.5 py-0.5 rounded-full">Winner</span>
+      </div>
+      <p class="text-slate-600 text-sm leading-relaxed">
+        The Creta edges out rivals with its turbocharged engine, superior NCAP safety rating, and a more premium cabin experience. For buyers wanting the full package under ₹17 lakh, it's the clear winner. The Seltos is a strong alternative with a slightly longer wheelbase, while the Brezza remains the undisputed choice for budget-conscious and fuel-efficiency-first buyers.
+      </p>
+    </div>
+    <div class="shrink-0">
+      <a href="#" class="inline-flex items-center gap-1.5 bg-brand-red text-white text-sm font-semibold px-4 py-2 rounded-full hover:bg-red-700 transition-colors">
+        Full Review
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COMPARISON SPEC MATRIX ===================== -->
+<section class="max-w-7xl mx-auto px-4 pb-6 space-y-4">
+
+  <!-- Column Header Legend (sticky on desktop) -->
+  <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+    <div class="grid grid-cols-4 text-xs font-bold text-slate-500 uppercase tracking-wide">
+      <div class="p-3 border-r border-slate-100">Specification</div>
+      <div class="p-3 border-r border-slate-100 text-center text-blue-700 bg-blue-50">
+        <div class="flex items-center justify-center gap-1">
+          <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+          Hyundai Creta
+        </div>
+      </div>
+      <div class="p-3 border-r border-slate-100 text-center text-purple-700 bg-purple-50">
+        <div class="flex items-center justify-center gap-1">
+          <div class="w-2 h-2 rounded-full bg-purple-500"></div>
+          Kia Seltos
+        </div>
+      </div>
+      <div class="p-3 text-center text-green-700 bg-green-50">
+        <div class="flex items-center justify-center gap-1">
+          <div class="w-2 h-2 rounded-full bg-green-500"></div>
+          Maruti Brezza
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- KEY LEGEND -->
+  <div class="flex flex-wrap items-center gap-4 text-xs text-slate-500 px-1">
+    <div class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-sm bg-green-100 border border-green-300 inline-block"></span> Winner</div>
+    <div class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-sm bg-blue-50 border border-blue-200 inline-block"></span> Tie</div>
+    <div class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-sm bg-white border border-slate-200 inline-block"></span> Standard</div>
+  </div>
+
+  <!-- SECTION 1: Price -->
+  <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+    <button onclick="toggleSection('price')" class="w-full flex items-center justify-between p-4 md:p-5 hover:bg-slate-50 transition-colors">
+      <div class="flex items-center gap-2">
+        <span class="text-xl">💰</span>
+        <h3 class="font-black text-slate-900 text-base md:text-lg">Price &amp; Variants</h3>
+      </div>
+      <svg id="chevron-price" class="chevron w-5 h-5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></svg>
+    </button>
+    <div id="section-price" class="accordion-content expanded">
+      <div class="comp-table">
+        <table class="w-full text-sm border-t border-slate-100" style="min-width:560px;">
+          <thead>
+            <tr class="bg-slate-50 border-b border-slate-100">
+              <th class="text-left py-2.5 px-4 font-semibold text-slate-500 text-xs uppercase w-1/4">Metric</th>
+              <th class="py-2.5 px-3 font-semibold text-blue-600 text-xs uppercase text-center w-1/4">Creta</th>
+              <th class="py-2.5 px-3 font-semibold text-purple-600 text-xs uppercase text-center w-1/4">Seltos</th>
+              <th class="py-2.5 px-3 font-semibold text-green-600 text-xs uppercase text-center w-1/4">Brezza</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-slate-50">
+              <td class="py-3 px-4 text-slate-600 font-medium">Starting Price</td>
+              <td class="py-3 px-3 text-center loser-cell">₹11.00 L</td>
+              <td class="py-3 px-3 text-center loser-cell muted-text">₹11.59 L</td>
+              <td class="py-3 px-3 text-center winner-cell"><span class="winner-text">₹8.34 L 🏆</span></td>
+            </tr>
+            <tr class="border-b border-slate-50 bg-slate-50/50">
+              <td class="py-3 px-4 text-slate-600 font-medium">Top Variant Price</td>
+              <td class="py-3 px-3 text-center loser-cell muted-text">₹20.15 L</td>
+              <td class="py-3 px-3 text-center loser-cell muted-text">₹20.90 L</td>
+              <td class="py-3 px-3 text-center winner-cell"><span class="winner-text">₹14.99 L 🏆</span></td>
+            </tr>
+            <tr class="border-b border-slate-50">
+              <td class="py-3 px-4 text-slate-600 font-medium">Number of Variants</td>
+              <td class="py-3 px-3 text-center winner-cell"><span class="winner-text font-bold">8 🏆</span></td>
+              <td class="py-3 px-3 text-center loser-cell muted-text">7</td>
+              <td class="py-3 px-3 text-center loser-cell muted-text">4</td>
+            </tr>
+            <tr class="border-b border-slate-50 bg-slate-50/50">
+              <td class="py-3 px-4 text-slate-600 font-medium">EMI (mid variant)</td>
+              <td class="py-3 px-3 text-center loser-cell muted-text">₹32,870/mo</td>
+              <td class="py-3 px-3 text-center loser-cell muted-text">₹32,190/mo</td>
+              <td class="py-3 px-3 text-center winner-cell"><span class="winner-text">₹26,030/mo 🏆</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 2: Engine & Performance -->
+  <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+    <button onclick="toggleSection('engine')" class="w-full flex items-center justify-between p-4 md:p-5 hover:bg-slate-50 transition-colors">
+      <div class="flex items-center gap-2">
+        <span class="text-xl">⚡</span>
+        <h3 class="font-black text-slate-900 text-base md:text-lg">Engine &amp; Performance</h3>
+      </div>
+      <svg id="chevron-engine" class="chevron w-5 h-5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></svg>
+    </button>
+    <div id="section-engine" class="accordion-content expanded">
+      <div class="comp-table">
+        <table class="w-full text-sm border-t border-slate-100" style="min-width:560px;">
+          <thead>
+            <tr class="bg-slate-50 border-b border-slate-100">
+              <th class="text-left py-2.5 px-4 font-semibold text-slate-500 text-xs uppercase w-1/4">Metric</th>
+              <th class="py-2.5 px-3 font-semibold text-blue-600 text-xs uppercase text-center w-1/4">Creta</th>
+              <th class="py-2.5 px-3 font-semibold text-purple-600 text-xs uppercase text-center w-1/4">Seltos</th>
+              <th class="py-2.5 px-3 font-semibold text-green-600 text-xs uppercase text-center w-1/4">Brezza</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-slate-50">
+              <td class="py-3 px-4 text-slate-600 font-medium">Engine Options</td>
+              <td class="py-3 px-3 text-center text-slate-700 text-xs">1.5L NA / 1.5L Turbo</td>
+              <td class="py-3 px-3 text-center text-slate-700 text-xs">1.5L NA / 1.5L Turbo</td>
+              <td class="py-3 px-3 text-center muted-text text-xs">1.5L NA Petrol only</td>
+            </tr>
+            <tr class="border-b border-slate-50 bg-slate-50/50">
+              <td class="py-3 px-4 text-slate-600 font-medium">Peak Power</td>
+              <td class="py-3 px-3 text-center tie-cell"><span class="tie-text">160 PS 🏆</span></td>
+              <td class="py-3 px-3 text-center tie-cell"><span class="tie-text">160 PS 🏆</span></td>
+              <td class="py-3 px-3 text-center loser-cell muted-text">103 PS</td>
+            </tr>
+            <tr class="border-b border-slate-50">
+              <td class="py-3 px-4 text-slate-600 font-medium">Peak Torque</td>
+              <td class="py-3 px-3 text-center tie-cell"><span class="tie-text">253 Nm 🏆</span></td>
+              <td class="py-3 px-3 text-center tie-cell"><span class="tie-text">253 Nm 🏆</span></td>
+              <td class="py-3 px-3 text-center loser-cell muted-text">136.8 Nm</td>
+            </tr>
+            <tr class="border-b border-slate-50 bg-slate-50/50">
+              <td class="py-3 px-4 text-slate-600 font-medium">Transmission</td>
+              <td class="py-3 px-3 text-center text-slate-700 text-xs">MT / iMT / DCT</td>
+              <td class="py-3 px-3 text-center text-slate-700 text-xs">MT / iMT / DCT</td>
+              <td class="py-3 px-3 text-center text-slate-700 text-xs">MT / AT</td>
+            </tr>
+            <tr class="border-b border-slate-50">
+              <td class="py-3 px-4 text-slate-600 font-medium">0–100 km/h</td>
+              <td class="py-3 px-3 text-center loser-cell muted-text">~10.8 sec</td>
+              <td class="py-3 px-3 text-center winner-cell"><span class="winner-text">~10.5 sec 🏆</span></td>
+              <td class="py-3 px-3 text-center loser-cell muted-text">~12.5 sec</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 3: Fuel Efficiency -->
+  <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+    <button onclick="toggleSection('fuel')" class="w-full flex items-center justify-between p-4 md:p-5 hover:bg-slate-50 transition-colors">
+      <div class="flex items-center gap-2">
+        <span class="text-xl">⛽</span>
+        <h3 class="font-black text-slate-900 text-base md:text-lg">Fuel Efficiency</h3>
+      </div>
+      <svg id="chevron-fuel" class="chevron w-5 h-5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></svg>
+    </button>
+    <div id="section-fuel" class="accordion-content expanded">
+      <div class="comp-table">
+        <table class="w-full text-sm border-t border-slate-100" style="min-width:560px;">
+          <thead>
+            <tr class="bg-slate-50 border-b border-slate-100">
+              <th class="text-left py-2.5 px-4 font-semibold text-slate-500 text-xs uppercase w-1/4">Metric</th>
+              <th class="py-2.5 px-3 font-semibold text-blue-600 text-xs uppercase text-center w-1/4">Creta</th>
+              <th class="py-2.5 px-3 font-semibold text-purple-600 text-xs uppercase text-center w-1/4">Seltos</th>
+              <th class="py-2.5 px-3 font-semibold text-green-600 text-xs uppercase text-center w-1/4">Brezza</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-slate-50">
+              <td class="py-3 px-4 text-slate-600 font-medium">ARAI Mileage (best)</td>
+              <td class="py-3 px-3 text-center loser-cell muted-text">17.4 kmpl</td>
+              <td class="py-3 px-3 text-center loser-cell muted-text">16.5 kmpl</td>
+              <td class="py-3 px-3 text-center winner-cell"><span class="winner-text">20.15 kmpl 🏆</span></td>
+            </tr>
+            <tr class="border-b border-slate-50 bg-slate-50/50">
+              <td class="py-3 px-4 text-slate-600 font-medium">Real-World (city)</td>
+              <td class="py-3 px-3 text-center loser-cell muted-text">~12.8 kmpl</td>
+              <td class="py-3 px-3 text-center loser-cell muted-text">~12.3 kmpl</td>
+              <td class="py-3 px-3 text-center winner-cell"><span class="winner-text">~15.2 kmpl 🏆</span></td>
+            </tr>
+            <tr class="border-b border-slate-50">
+              <td class="py-3 px-4 text-slate-600 font-medium">Fuel Tank</td>
+              <td class="py-3 px-3 text-center tie-cell"><span class="tie-text">50 L</span></td>
+              <td class="py-3 px-3 text-center tie-cell"><span class="tie-text">50 L</span></td>
+              <td class="py-3 px-3 text-center loser-cell muted-text">48 L</td>
+            </tr>
+            <tr class="border-b border-slate-50 bg-slate-50/50">
+              <td class="py-3 px-4 text-slate-600 font-medium">Fuel Type</td>
+              <td class="py-3 px-3 text-center text-slate-700">Petrol</td>
+              <td class="py-3 px-3 text-center text-slate-700">Petrol</td>
+              <td class="py-3 px-3 text-center text-slate-700">Petrol</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 4: Dimensions -->
+  <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+    <button onclick="toggleSection('dims')" class="w-full flex items-center justify-between p-4 md:p-5 hover:bg-slate-50 transition-colors">
+      <div class="flex items-center gap-2">
+        <span class="text-xl">📐</span>
+        <h3 class="font-black text-slate-900 text-base md:text-lg">Dimensions</h3>
+      </div>
+      <svg id="chevron-dims" class="chevron w-5 h-5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></svg>
+    </button>
+    <div id="section-dims" class="accordion-content expanded">
+      <div class="comp-table">
+        <table class="w-full text-sm border-t border-slate-100" style="min-width:560px;">
+          <thead>
+            <tr class="bg-slate-50 border-b border-slate-100">
+              <th class="text-left py-2.5 px-4 font-semibold text-slate-500 text-xs uppercase w-1/4">Metric</th>
+              <th class="py-2.5 px-3 font-semibold text-blue-600 text-xs uppercase text-center w-1/4">Creta</th>
+              <th class="py-2.5 px-3 font-semibold text-purple-600 text-xs uppercase text-center w-1/4">Seltos</th>
+              <th class="py-2.5 px-3 font-semibold text-green-600 text-xs uppercase text-center w-1/4">Brezza</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-slate-50">
+              <td class="py-3 px-4 text-slate-600 font-medium">Length</td>
+              <td class="py-3 px-3 text-center loser-cell muted-text">4,330 mm</td>
+              <td class="py-3 px-3 text-center winner-cell"><span class="winner-text">4,370 mm 🏆</span></td>
+              <td class="py-3 px-3 text-center loser-cell muted-text">3,990 mm</td>
+            </tr>
+            <tr class="border-b border-slate-50 bg-slate-50/50">
+              <td class="py-3 px-4 text-slate-600 font-medium">Width</td>
+              <td class="py-3 px-3 text-center loser-cell muted-text">1,790 mm</td>
+              <td class="py-3 px-3 text-center winner-cell"><span class="winner-text">1,800 mm 🏆</span></td>
+              <td class="py-3 px-3 text-center loser-cell muted-text">1,764 mm</td>
+            </tr>
+            <tr class="border-b border-slate-50">
+              <td class="py-3 px-4 text-slate-600 font-medium">Height</td>
+              <td class="py-3 px-3 text-center loser-cell muted-text">1,635 mm</td>
+              <td class="py-3 px-3 text-center loser-cell muted-text">1,620 mm</td>
+              <td class="py-3 px-3 text-center winner-cell"><span class="winner-text">1,685 mm 🏆</span></td>
+            </tr>
+            <tr class="border-b border-slate-50 bg-slate-50/50">
+              <td class="py-3 px-4 text-slate-600 font-medium">Wheelbase</td>
+              <td class="py-3 px-3 text-center loser-cell muted-text">2,610 mm</td>
+              <td class="py-3 px-3 text-center winner-cell"><span class="winner-text">2,630 mm 🏆</span></td>
+              <td class="py-3 px-3 text-center loser-cell muted-text">2,500 mm</td>
+            </tr>
+            <tr class="border-b border-slate-50">
+              <td class="py-3 px-4 text-slate-600 font-medium">Ground Clearance</td>
+              <td class="py-3 px-3 text-center tie-cell"><span class="tie-text">190 mm 🏆</span></td>
+              <td class="py-3 px-3 text-center tie-cell"><span class="tie-text">190 mm 🏆</span></td>
+              <td class="py-3 px-3 text-center loser-cell muted-text">188 mm</td>
+            </tr>
+            <tr class="border-b border-slate-50 bg-slate-50/50">
+              <td class="py-3 px-4 text-slate-600 font-medium">Boot Space</td>
+              <td class="py-3 px-3 text-center tie-cell"><span class="tie-text">433 L 🏆</span></td>
+              <td class="py-3 px-3 text-center tie-cell"><span class="tie-text">433 L 🏆</span></td>
+              <td class="py-3 px-3 text-center loser-cell muted-text">328 L</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 5: Safety -->
+  <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+    <button onclick="toggleSection('safety')" class="w-full flex items-center justify-between p-4 md:p-5 hover:bg-slate-50 transition-colors">
+      <div class="flex items-center gap-2">
+        <span class="text-xl">🛡️</span>
+        <h3 class="font-black text-slate-900 text-base md:text-lg">Safety</h3>
+      </div>
+      <svg id="chevron-safety" class="chevron w-5 h-5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></svg>
+    </button>
+    <div id="section-safety" class="accordion-content expanded">
+      <div class="comp-table">
+        <table class="w-full text-sm border-t border-slate-100" style="min-width:560px;">
+          <thead>
+            <tr class="bg-slate-50 border-b border-slate-100">
+              <th class="text-left py-2.5 px-4 font-semibold text-slate-500 text-xs uppercase w-1/4">Feature</th>
+              <th class="py-2.5 px-3 font-semibold text-blue-600 text-xs uppercase text-center w-1/4">Creta</th>
+              <th class="py-2.5 px-3 font-semibold text-purple-600 text-xs uppercase text-center w-1/4">Seltos</th>
+              <th class="py-2.5 px-3 font-semibold text-green-600 text-xs uppercase text-center w-1/4">Brezza</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-slate-50">
+              <td class="py-3 px-4 text-slate-600 font-medium">NCAP Rating</td>
+              <td class="py-3 px-3 text-center tie-cell"><span class="tie-text font-bold">5-Star ⭐ 🏆</span></td>
+              <td class="py-3 px-3 text-center tie-cell"><span class="tie-text font-bold">5-Star ⭐ 🏆</span></td>
+              <td class="py-3 px-3 text-center loser-cell muted-text">Not Tested</td>
+            </tr>
+            <tr class="border-b border-slate-50 bg-slate-50/50">
+              <td class="py-3 px-4 text-slate-600 font-medium">Airbags (standard)</td>
+              <td class="py-3 px-3 text-center tie-cell"><span class="tie-text font-bold">6 🏆</span></td>
+              <td class="py-3 px-3 text-center tie-cell"><span class="tie-text font-bold">6 🏆</span></td>
+              <td class="py-3 px-3 text-center tie-cell"><span class="tie-text font-bold">6 🏆</span></td>
+            </tr>
+            <tr class="border-b border-slate-50">
+              <td class="py-3 px-4 text-slate-600 font-medium">ABS + EBD</td>
+              <td class="py-3 px-3 text-center tie-cell text-green-700 font-bold">✓</td>
+              <td class="py-3 px-3 text-center tie-cell text-green-700 font-bold">✓</td>
+              <td class="py-3 px-3 text-center tie-cell text-green-700 font-bold">✓</td>
+            </tr>
+            <tr class="border-b border-slate-50 bg-slate-50/50">
+              <td class="py-3 px-4 text-slate-600 font-medium">ESC</td>
+              <td class="py-3 px-3 text-center tie-cell text-green-700 font-bold">✓</td>
+              <td class="py-3 px-3 text-center tie-cell text-green-700 font-bold">✓</td>
+              <td class="py-3 px-3 text-center tie-cell text-green-700 font-bold">✓</td>
+            </tr>
+            <tr class="border-b border-slate-50">
+              <td class="py-3 px-4 text-slate-600 font-medium">ADAS Suite</td>
+              <td class="py-3 px-3 text-center winner-cell"><span class="winner-text">Level 2 🏆</span></td>
+              <td class="py-3 px-3 text-center loser-cell muted-text">Level 1</td>
+              <td class="py-3 px-3 text-center loser-cell text-red-400 font-medium">None</td>
+            </tr>
+            <tr class="border-b border-slate-50 bg-slate-50/50">
+              <td class="py-3 px-4 text-slate-600 font-medium">360° Camera</td>
+              <td class="py-3 px-3 text-center text-slate-700 text-xs">SX(O) only</td>
+              <td class="py-3 px-3 text-center text-slate-700 text-xs">GTX+ only</td>
+              <td class="py-3 px-3 text-center text-slate-700 text-xs">ZXi+ only</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 6: Features & Technology -->
+  <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+    <button onclick="toggleSection('features')" class="w-full flex items-center justify-between p-4 md:p-5 hover:bg-slate-50 transition-colors">
+      <div class="flex items-center gap-2">
+        <span class="text-xl">🎛️</span>
+        <h3 class="font-black text-slate-900 text-base md:text-lg">Features &amp; Technology</h3>
+      </div>
+      <svg id="chevron-features" class="chevron w-5 h-5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></svg>
+    </button>
+    <div id="section-features" class="accordion-content expanded">
+      <div class="comp-table">
+        <table class="w-full text-sm border-t border-slate-100" style="min-width:560px;">
+          <thead>
+            <tr class="bg-slate-50 border-b border-slate-100">
+              <th class="text-left py-2.5 px-4 font-semibold text-slate-500 text-xs uppercase w-1/4">Feature</th>
+              <th class="py-2.5 px-3 font-semibold text-blue-600 text-xs uppercase text-center w-1/4">Creta</th>
+              <th class="py-2.5 px-3 font-semibold text-purple-600 text-xs uppercase text-center w-1/4">Seltos</th>
+              <th class="py-2.5 px-3 font-semibold text-green-600 text-xs uppercase text-center w-1/4">Brezza</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-slate-50">
+              <td class="py-3 px-4 text-slate-600 font-medium">Infotainment Screen</td>
+              <td class="py-3 px-3 text-center tie-cell"><span class="tie-text font-bold">10.25" 🏆</span></td>
+              <td class="py-3 px-3 text-center tie-cell"><span class="tie-text font-bold">10.25" 🏆</span></td>
+              <td class="py-3 px-3 text-center loser-cell muted-text">9"</td>
+            </tr>
+            <tr class="border-b border-slate-50 bg-slate-50/50">
+              <td class="py-3 px-4 text-slate-600 font-medium">Digital Cluster</td>
+              <td class="py-3 px-3 text-center tie-cell"><span class="tie-text font-bold">10.25" 🏆</span></td>
+              <td class="py-3 px-3 text-center tie-cell"><span class="tie-text font-bold">10.25" 🏆</span></td>
+              <td class="py-3 px-3 text-center loser-cell muted-text">7"</td>
+            </tr>
+            <tr class="border-b border-slate-50">
+              <td class="py-3 px-4 text-slate-600 font-medium">Panoramic Sunroof</td>
+              <td class="py-3 px-3 text-center text-green-700 font-bold">✓ <span class="text-xs text-slate-400 font-normal">(SX+)</span></td>
+              <td class="py-3 px-3 text-center text-green-700 font-bold">✓ <span class="text-xs text-slate-400 font-normal">(HTX+)</span></td>
+              <td class="py-3 px-3 text-center text-red-400 font-bold">✗</td>
+            </tr>
+            <tr class="border-b border-slate-50 bg-slate-50/50">
+              <td class="py-3 px-4 text-slate-600 font-medium">Wireless Charging</td>
+              <td class="py-3 px-3 text-center text-green-700 font-bold">✓ <span class="text-xs text-slate-400 font-normal">(SX+)</span></td>
+              <td class="py-3 px-3 text-center text-green-700 font-bold">✓ <span class="text-xs text-slate-400 font-normal">(HTX+)</span></td>
+              <td class="py-3 px-3 text-center text-green-700 font-bold">✓ <span class="text-xs text-slate-400 font-normal">(ZXi+)</span></td>
+            </tr>
+            <tr class="border-b border-slate-50">
+              <td class="py-3 px-4 text-slate-600 font-medium">Ventilated Seats</td>
+              <td class="py-3 px-3 text-center text-green-700 font-bold">✓ <span class="text-xs text-slate-400 font-normal">(SX(O))</span></td>
+              <td class="py-3 px-3 text-center text-green-700 font-bold">✓ <span class="text-xs text-slate-400 font-normal">(GTX+)</span></td>
+              <td class="py-3 px-3 text-center text-red-400 font-bold">✗</td>
+            </tr>
+            <tr class="border-b border-slate-50 bg-slate-50/50">
+              <td class="py-3 px-4 text-slate-600 font-medium">Connected Car</td>
+              <td class="py-3 px-3 text-center text-slate-700 text-xs">Hyundai BlueLink</td>
+              <td class="py-3 px-3 text-center text-slate-700 text-xs">Kia Connect</td>
+              <td class="py-3 px-3 text-center text-slate-700 text-xs">Suzuki Connect</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ===================== MID-CONTENT AD SLOT ===================== -->
+<div class="max-w-7xl mx-auto px-4 pb-6">
+  <div class="w-full rounded-xl overflow-hidden border border-dashed border-slate-300 bg-gradient-to-r from-slate-50 via-white to-slate-50" style="min-height:100px;">
+    <div class="flex flex-col items-center justify-center h-full py-6 gap-2">
+      <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest border border-slate-300 rounded px-2 py-0.5">Advertisement</span>
+      <p class="text-slate-400 text-sm">Native Content Ad — 970×90 or Responsive</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== USER RATINGS SECTION ===================== -->
+<section class="max-w-7xl mx-auto px-4 pb-8">
+  <div class="flex items-center gap-3 mb-5">
+    <div class="w-1 h-7 bg-brand-red rounded-full"></div>
+    <h2 class="text-xl md:text-2xl font-black text-slate-900">User Ratings &amp; Verdict</h2>
+  </div>
+  <p class="text-slate-500 text-sm mb-6">Based on verified owner reviews collected by Autowider</p>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+    <!-- Creta Ratings -->
+    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h3 class="font-black text-slate-900">Hyundai Creta</h3>
+          <p class="text-xs text-slate-400">1,842 verified reviews</p>
+        </div>
+        <div class="text-right">
+          <div class="text-2xl font-black text-slate-900">4.2<span class="text-base font-medium text-slate-400">/5</span></div>
+          <div class="text-yellow-400 text-sm">★★★★☆</div>
+        </div>
+      </div>
+      <div class="space-y-3">
+        <div>
+          <div class="flex justify-between text-xs text-slate-600 mb-1"><span>Design</span><span class="font-semibold">4.3</span></div>
+          <div class="bg-slate-100 rounded-full h-2 overflow-hidden"><div class="h-2 rounded-full bg-brand-red progress-bar-fill" style="width:86%"></div></div>
+        </div>
+        <div>
+          <div class="flex justify-between text-xs text-slate-600 mb-1"><span>Performance</span><span class="font-semibold">4.4</span></div>
+          <div class="bg-slate-100 rounded-full h-2 overflow-hidden"><div class="h-2 rounded-full bg-brand-red progress-bar-fill" style="width:88%"></div></div>
+        </div>
+        <div>
+          <div class="flex justify-between text-xs text-slate-600 mb-1"><span>Comfort</span><span class="font-semibold">4.2</span></div>
+          <div class="bg-slate-100 rounded-full h-2 overflow-hidden"><div class="h-2 rounded-full bg-brand-red progress-bar-fill" style="width:84%"></div></div>
+        </div>
+        <div>
+          <div class="flex justify-between text-xs text-slate-600 mb-1"><span>Value for Money</span><span class="font-semibold">4.1</span></div>
+          <div class="bg-slate-100 rounded-full h-2 overflow-hidden"><div class="h-2 rounded-full bg-brand-red progress-bar-fill" style="width:82%"></div></div>
+        </div>
+        <div>
+          <div class="flex justify-between text-xs text-slate-600 mb-1"><span>Mileage</span><span class="font-semibold">3.9</span></div>
+          <div class="bg-slate-100 rounded-full h-2 overflow-hidden"><div class="h-2 rounded-full bg-brand-red progress-bar-fill" style="width:78%"></div></div>
+        </div>
+      </div>
+      <div class="mt-4 pt-4 border-t border-slate-100">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-brand-red inline-block"></span>
+          <p class="text-xs text-slate-500 italic">"Best-in-class ADAS features make daily commuting significantly safer."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seltos Ratings -->
+    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h3 class="font-black text-slate-900">Kia Seltos</h3>
+          <p class="text-xs text-slate-400">1,590 verified reviews</p>
+        </div>
+        <div class="text-right">
+          <div class="text-2xl font-black text-slate-900">4.1<span class="text-base font-medium text-slate-400">/5</span></div>
+          <div class="text-yellow-400 text-sm">★★★★☆</div>
+        </div>
+      </div>
+      <div class="space-y-3">
+        <div>
+          <div class="flex justify-between text-xs text-slate-600 mb-1"><span>Design</span><span class="font-semibold">4.4</span></div>
+          <div class="bg-slate-100 rounded-full h-2 overflow-hidden"><div class="h-2 rounded-full bg-purple-500 progress-bar-fill" style="width:88%"></div></div>
+        </div>
+        <div>
+          <div class="flex justify-between text-xs text-slate-600 mb-1"><span>Performance</span><span class="font-semibold">4.3</span></div>
+          <div class="bg-slate-100 rounded-full h-2 overflow-hidden"><div class="h-2 rounded-full bg-purple-500 progress-bar-fill" style="width:86%"></div></div>
+        </div>
+        <div>
+          <div class="flex justify-between text-xs text-slate-600 mb-1"><span>Comfort</span><span class="font-semibold">4.1</span></div>
+          <div class="bg-slate-100 rounded-full h-2 overflow-hidden"><div class="h-2 rounded-full bg-purple-500 progress-bar-fill" style="width:82%"></div></div>
+        </div>
+        <div>
+          <div class="flex justify-between text-xs text-slate-600 mb-1"><span>Value for Money</span><span class="font-semibold">4.0</span></div>
+          <div class="bg-slate-100 rounded-full h-2 overflow-hidden"><div class="h-2 rounded-full bg-purple-500 progress-bar-fill" style="width:80%"></div></div>
+        </div>
+        <div>
+          <div class="flex justify-between text-xs text-slate-600 mb-1"><span>Mileage</span><span class="font-semibold">3.8</span></div>
+          <div class="bg-slate-100 rounded-full h-2 overflow-hidden"><div class="h-2 rounded-full bg-purple-500 progress-bar-fill" style="width:76%"></div></div>
+        </div>
+      </div>
+      <div class="mt-4 pt-4 border-t border-slate-100">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-purple-500 inline-block"></span>
+          <p class="text-xs text-slate-500 italic">"The longer wheelbase genuinely improves rear-seat comfort on long drives."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Brezza Ratings -->
+    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h3 class="font-black text-slate-900">Maruti Brezza</h3>
+          <p class="text-xs text-slate-400">2,210 verified reviews</p>
+        </div>
+        <div class="text-right">
+          <div class="text-2xl font-black text-slate-900">4.0<span class="text-base font-medium text-slate-400">/5</span></div>
+          <div class="text-yellow-400 text-sm">★★★★☆</div>
+        </div>
+      </div>
+      <div class="space-y-3">
+        <div>
+          <div class="flex justify-between text-xs text-slate-600 mb-1"><span>Design</span><span class="font-semibold">4.1</span></div>
+          <div class="bg-slate-100 rounded-full h-2 overflow-hidden"><div class="h-2 rounded-full bg-green-500 progress-bar-fill" style="width:82%"></div></div>
+        </div>
+        <div>
+          <div class="flex justify-between text-xs text-slate-600 mb-1"><span>Performance</span><span class="font-semibold">3.8</span></div>
+          <div class="bg-slate-100 rounded-full h-2 overflow-hidden"><div class="h-2 rounded-full bg-green-500 progress-bar-fill" style="width:76%"></div></div>
+        </div>
+        <div>
+          <div class="flex justify-between text-xs text-slate-600 mb-1"><span>Comfort</span><span class="font-semibold">4.0</span></div>
+          <div class="bg-slate-100 rounded-full h-2 overflow-hidden"><div class="h-2 rounded-full bg-green-500 progress-bar-fill" style="width:80%"></div></div>
+        </div>
+        <div>
+          <div class="flex justify-between text-xs text-slate-600 mb-1"><span>Value for Money</span><span class="font-semibold">4.5</span></div>
+          <div class="bg-slate-100 rounded-full h-2 overflow-hidden"><div class="h-2 rounded-full bg-green-500 progress-bar-fill" style="width:90%"></div></div>
+        </div>
+        <div>
+          <div class="flex justify-between text-xs text-slate-600 mb-1"><span>Mileage</span><span class="font-semibold">4.6</span></div>
+          <div class="bg-slate-100 rounded-full h-2 overflow-hidden"><div class="h-2 rounded-full bg-green-500 progress-bar-fill" style="width:92%"></div></div>
+        </div>
+      </div>
+      <div class="mt-4 pt-4 border-t border-slate-100">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-green-500 inline-block"></span>
+          <p class="text-xs text-slate-500 italic">"Incredible fuel efficiency and Maruti's service network are unbeatable advantages."</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== CONCLUSION SECTION ===================== -->
+<section class="max-w-7xl mx-auto px-4 pb-10">
+  <div class="flex items-center gap-3 mb-5">
+    <div class="w-1 h-7 bg-brand-red rounded-full"></div>
+    <h2 class="text-xl md:text-2xl font-black text-slate-900">Who Should Buy Which Car?</h2>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+    <!-- Buy Creta -->
+    <div class="bg-white rounded-2xl shadow-sm border-t-4 p-5" style="border-top-color:#2d6a9f;">
+      <div class="flex items-center gap-2 mb-4">
+        <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background:linear-gradient(135deg,#2d6a9f,#7ab3d4);">
+          <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <h3 class="font-black text-slate-900">Buy Creta If…</h3>
+      </div>
+      <ul class="space-y-2.5">
+        <li class="flex items-start gap-2 text-sm text-slate-700">
+          <span class="mt-0.5 text-green-600 font-bold shrink-0">✓</span>
+          You want the best safety rating in segment
+        </li>
+        <li class="flex items-start gap-2 text-sm text-slate-700">
+          <span class="mt-0.5 text-green-600 font-bold shrink-0">✓</span>
+          You prioritize engine performance &amp; driving dynamics
+        </li>
+        <li class="flex items-start gap-2 text-sm text-slate-700">
+          <span class="mt-0.5 text-green-600 font-bold shrink-0">✓</span>
+          You need a premium cabin with all tech features
+        </li>
+        <li class="flex items-start gap-2 text-sm text-slate-700">
+          <span class="mt-0.5 text-green-600 font-bold shrink-0">✓</span>
+          ADAS / Level 2 autonomy matters to you
+        </li>
+      </ul>
+      <div class="mt-5 pt-4 border-t border-slate-100">
+        <a href="#" class="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold px-4 py-2.5 rounded-xl transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Get Creta Quote
+        </a>
+      </div>
+    </div>
+
+    <!-- Buy Seltos -->
+    <div class="bg-white rounded-2xl shadow-sm border-t-4 p-5" style="border-top-color:#8b8ba8;">
+      <div class="flex items-center gap-2 mb-4">
+        <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background:linear-gradient(135deg,#5a5a6e,#b0b0c4);">
+          <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <h3 class="font-black text-slate-900">Buy Seltos If…</h3>
+      </div>
+      <ul class="space-y-2.5">
+        <li class="flex items-start gap-2 text-sm text-slate-700">
+          <span class="mt-0.5 text-green-600 font-bold shrink-0">✓</span>
+          Longer wheelbase matters for rear-seat comfort
+        </li>
+        <li class="flex items-start gap-2 text-sm text-slate-700">
+          <span class="mt-0.5 text-green-600 font-bold shrink-0">✓</span>
+          You prefer Kia's warranty and service network
+        </li>
+        <li class="flex items-start gap-2 text-sm text-slate-700">
+          <span class="mt-0.5 text-green-600 font-bold shrink-0">✓</span>
+          The bold exterior styling appeals more to you
+        </li>
+        <li class="flex items-start gap-2 text-sm text-slate-700">
+          <span class="mt-0.5 text-green-600 font-bold shrink-0">✓</span>
+          Availability matters &amp; waiting period is a concern
+        </li>
+      </ul>
+      <div class="mt-5 pt-4 border-t border-slate-100">
+        <a href="#" class="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold px-4 py-2.5 rounded-xl transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Get Seltos Quote
+        </a>
+      </div>
+    </div>
+
+    <!-- Buy Brezza -->
+    <div class="bg-white rounded-2xl shadow-sm border-t-4 p-5" style="border-top-color:#2d6b45;">
+      <div class="flex items-center gap-2 mb-4">
+        <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background:linear-gradient(135deg,#2d6b45,#8ec4a0);">
+          <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <h3 class="font-black text-slate-900">Buy Brezza If…</h3>
+      </div>
+      <ul class="space-y-2.5">
+        <li class="flex items-start gap-2 text-sm text-slate-700">
+          <span class="mt-0.5 text-green-600 font-bold shrink-0">✓</span>
+          Budget is under ₹15 lakh (best value in class)
+        </li>
+        <li class="flex items-start gap-2 text-sm text-slate-700">
+          <span class="mt-0.5 text-green-600 font-bold shrink-0">✓</span>
+          Fuel efficiency is your absolute top priority
+        </li>
+        <li class="flex items-start gap-2 text-sm text-slate-700">
+          <span class="mt-0.5 text-green-600 font-bold shrink-0">✓</span>
+          You prefer Maruti's unmatched service network
+        </li>
+        <li class="flex items-start gap-2 text-sm text-slate-700">
+          <span class="mt-0.5 text-green-600 font-bold shrink-0">✓</span>
+          You don't need ADAS or a large infotainment screen
+        </li>
+      </ul>
+      <div class="mt-5 pt-4 border-t border-slate-100">
+        <a href="#" class="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold px-4 py-2.5 rounded-xl transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Get Brezza Quote
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== MORE COMPARISONS SECTION ===================== -->
+<section class="max-w-7xl mx-auto px-4 pb-12">
+  <div class="flex items-center gap-3 mb-5">
+    <div class="w-1 h-7 bg-brand-red rounded-full"></div>
+    <h2 class="text-xl md:text-2xl font-black text-slate-900">More Comparisons</h2>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+    <!-- Card 1 -->
+    <a href="#" class="more-compare-card bg-white rounded-2xl border border-slate-200 shadow-sm p-4 block group">
+      <div class="flex items-center gap-3 mb-3">
+        <div class="flex-1 text-center">
+          <p class="font-black text-slate-800 text-sm">Hyundai Creta</p>
+          <p class="text-xs text-slate-400">₹11.00L onwards</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-xs font-black text-brand-red bg-red-50 px-2 py-1 rounded-full border border-red-100">VS</span>
+        </div>
+        <div class="flex-1 text-center">
+          <p class="font-black text-slate-800 text-sm">Honda Elevate</p>
+          <p class="text-xs text-slate-400">₹11.69L onwards</p>
+        </div>
+      </div>
+      <div class="border-t border-slate-100 pt-2 flex items-center justify-between">
+        <span class="text-xs text-slate-400">Mid-size SUV battle</span>
+        <span class="text-xs font-semibold text-brand-red group-hover:underline flex items-center gap-1">
+          Compare →
+        </span>
+      </div>
+    </a>
+
+    <!-- Card 2 -->
+    <a href="#" class="more-compare-card bg-white rounded-2xl border border-slate-200 shadow-sm p-4 block group">
+      <div class="flex items-center gap-3 mb-3">
+        <div class="flex-1 text-center">
+          <p class="font-black text-slate-800 text-sm">Kia Seltos</p>
+          <p class="text-xs text-slate-400">₹11.59L onwards</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-xs font-black text-brand-red bg-red-50 px-2 py-1 rounded-full border border-red-100">VS</span>
+        </div>
+        <div class="flex-1 text-center">
+          <p class="font-black text-slate-800 text-sm">Skoda Kushaq</p>
+          <p class="text-xs text-slate-400">₹11.49L onwards</p>
+        </div>
+      </div>
+      <div class="border-t border-slate-100 pt-2 flex items-center justify-between">
+        <span class="text-xs text-slate-400">Euro vs Korean SUV</span>
+        <span class="text-xs font-semibold text-brand-red group-hover:underline flex items-center gap-1">
+          Compare →
+        </span>
+      </div>
+    </a>
+
+    <!-- Card 3 -->
+    <a href="#" class="more-compare-card bg-white rounded-2xl border border-slate-200 shadow-sm p-4 block group">
+      <div class="flex items-center gap-3 mb-3">
+        <div class="flex-1 text-center">
+          <p class="font-black text-slate-800 text-sm">Hyundai Creta</p>
+          <p class="text-xs text-slate-400">₹11.00L onwards</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-xs font-black text-brand-red bg-red-50 px-2 py-1 rounded-full border border-red-100">VS</span>
+        </div>
+        <div class="flex-1 text-center">
+          <p class="font-black text-slate-800 text-sm">Hyundai Venue</p>
+          <p class="text-xs text-slate-400">₹7.94L onwards</p>
+        </div>
+      </div>
+      <div class="border-t border-slate-100 pt-2 flex items-center justify-between">
+        <span class="text-xs text-slate-400">Budget pick within brand</span>
+        <span class="text-xs font-semibold text-brand-red group-hover:underline flex items-center gap-1">
+          Compare →
+        </span>
+      </div>
+    </a>
+
+    <!-- Card 4 -->
+    <a href="#" class="more-compare-card bg-white rounded-2xl border border-slate-200 shadow-sm p-4 block group">
+      <div class="flex items-center gap-3 mb-3">
+        <div class="flex-1 text-center">
+          <p class="font-black text-slate-800 text-sm">Kia Seltos</p>
+          <p class="text-xs text-slate-400">₹11.59L onwards</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-xs font-black text-brand-red bg-red-50 px-2 py-1 rounded-full border border-red-100">VS</span>
+        </div>
+        <div class="flex-1 text-center">
+          <p class="font-black text-slate-800 text-sm">Maruti Brezza</p>
+          <p class="text-xs text-slate-400">₹8.34L onwards</p>
+        </div>
+      </div>
+      <div class="border-t border-slate-100 pt-2 flex items-center justify-between">
+        <span class="text-xs text-slate-400">Mid-budget shootout</span>
+        <span class="text-xs font-semibold text-brand-red group-hover:underline flex items-center gap-1">
+          Compare →
+        </span>
+      </div>
+    </a>
+
+    <!-- Card 5 -->
+    <a href="#" class="more-compare-card bg-white rounded-2xl border border-slate-200 shadow-sm p-4 block group">
+      <div class="flex items-center gap-3 mb-3">
+        <div class="flex-1 text-center">
+          <p class="font-black text-slate-800 text-sm">Hyundai Creta</p>
+          <p class="text-xs text-slate-400">₹11.00L onwards</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-xs font-black text-brand-red bg-red-50 px-2 py-1 rounded-full border border-red-100">VS</span>
+        </div>
+        <div class="flex-1 text-center">
+          <p class="font-black text-slate-800 text-sm">Tata Harrier</p>
+          <p class="text-xs text-slate-400">₹15.49L onwards</p>
+        </div>
+      </div>
+      <div class="border-t border-slate-100 pt-2 flex items-center justify-between">
+        <span class="text-xs text-slate-400">Premium shift consideration</span>
+        <span class="text-xs font-semibold text-brand-red group-hover:underline flex items-center gap-1">
+          Compare →
+        </span>
+      </div>
+    </a>
+
+    <!-- Card 6 -->
+    <a href="#" class="more-compare-card bg-white rounded-2xl border border-slate-200 shadow-sm p-4 block group">
+      <div class="flex items-center gap-3 mb-3">
+        <div class="flex-1 text-center">
+          <p class="font-black text-slate-800 text-sm">Maruti Brezza</p>
+          <p class="text-xs text-slate-400">₹8.34L onwards</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-xs font-black text-brand-red bg-red-50 px-2 py-1 rounded-full border border-red-100">VS</span>
+        </div>
+        <div class="flex-1 text-center">
+          <p class="font-black text-slate-800 text-sm">Tata Nexon</p>
+          <p class="text-xs text-slate-400">₹8.10L onwards</p>
+        </div>
+      </div>
+      <div class="border-t border-slate-100 pt-2 flex items-center justify-between">
+        <span class="text-xs text-slate-400">Compact rivalry</span>
+        <span class="text-xs font-semibold text-brand-red group-hover:underline flex items-center gap-1">
+          Compare →
+        </span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="nav-dark text-slate-400">
+  <div class="max-w-7xl mx-auto px-4 pt-12 pb-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 pb-10 border-b border-slate-800">
+
+      <!-- Brand Col -->
+      <div class="lg:col-span-2">
+        <div class="flex items-center gap-1 mb-3">
+          <span class="text-white font-black text-2xl tracking-tight">Auto</span>
+          <span class="text-brand-red font-black text-2xl">●</span>
+          <span class="text-white font-black text-2xl tracking-tight">Pulse</span>
+        </div>
+        <p class="text-sm text-slate-400 leading-relaxed mb-4">India's fastest-growing automotive journalism platform. Real reviews, real data — no sponsored bias.</p>
+        <div class="flex items-center gap-3">
+          <a href="#" aria-label="Twitter/X" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 flex items-center justify-center transition-colors">
+            <svg class="w-4 h-4 text-slate-300" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.731-8.835L1.254 2.25H8.08l4.261 5.632 5.904-5.632Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 flex items-center justify-center transition-colors">
+            <svg class="w-4 h-4 text-slate-300" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 flex items-center justify-center transition-colors">
+            <svg class="w-4 h-4 text-slate-300" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Quick Links</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-white transition-colors">News</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Car Reviews</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Compare Cars</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Car Prices</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">EV Hub</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Videos</a></li>
+        </ul>
+      </div>
+
+      <!-- Popular -->
+      <div>
+        <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Popular</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-white transition-colors">Creta vs Seltos</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Best SUVs Under 15L</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Nexon EV vs Tiago EV</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Harrier vs Safari</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Punch vs Brezza</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Swift Review 2026</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div>
+        <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Company</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-white transition-colors">About Autowider</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Editorial Policy</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Advertise With Us</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+      <p>© 2026 Autowider Media Pvt. Ltd. All rights reserved. Prices are ex-showroom Delhi and subject to change.</p>
+      <div class="flex items-center gap-1">
+        <svg class="w-3.5 h-3.5 text-brand-red" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>Made with ❤️ for Indian car enthusiasts</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== JAVASCRIPT ===================== -->
+<script>
+  // --- 1. Hamburger Menu Toggle ---
+  const hamburgerBtn = document.getElementById('hamburger-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  let menuOpen = false;
+
+  hamburgerBtn.addEventListener('click', function () {
+    menuOpen = !menuOpen;
+    if (menuOpen) {
+      mobileMenu.classList.remove('hidden');
+      hamburgerBtn.setAttribute('aria-expanded', 'true');
+    } else {
+      mobileMenu.classList.add('hidden');
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Close menu on outside click
+  document.addEventListener('click', function (e) {
+    if (menuOpen && !hamburgerBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+      mobileMenu.classList.add('hidden');
+      menuOpen = false;
+    }
+  });
+
+  // --- 2. Accordion Expand/Collapse ---
+  function toggleSection(id) {
+    const content = document.getElementById('section-' + id);
+    const chevron = document.getElementById('chevron-' + id);
+
+    if (content.classList.contains('expanded')) {
+      content.classList.remove('expanded');
+      content.classList.add('collapsed');
+      chevron.classList.add('rotated');
+    } else {
+      content.classList.remove('collapsed');
+      content.classList.add('expanded');
+      chevron.classList.remove('rotated');
+    }
+  }
+
+  // --- 3. Variant Selector → Price Update ---
+  const priceDisplays = {
+    creta: document.getElementById('creta-price'),
+    seltos: document.getElementById('seltos-price'),
+    brezza: document.getElementById('brezza-price')
+  };
+
+  const variantSelects = {
+    creta: document.getElementById('creta-variant'),
+    seltos: document.getElementById('seltos-variant'),
+    brezza: document.getElementById('brezza-variant')
+  };
+
+  function updatePrice(car) {
+    const select = variantSelects[car];
+    const display = priceDisplays[car];
+    const val = parseFloat(select.value).toFixed(2);
+    display.innerHTML = '₹' + val + ' <span class="text-base font-semibold text-slate-500">Lakh</span>';
+
+    // Subtle animation
+    display.style.transform = 'scale(1.05)';
+    display.style.transition = 'transform 0.15s ease';
+    setTimeout(function () {
+      display.style.transform = 'scale(1)';
+    }, 150);
+  }
+
+  // --- 4. Smooth Scroll ---
+  document.documentElement.style.scrollBehavior = 'smooth';
+
+  // --- 5. Share functions ---
+  function shareTwitter() {
+    var text = encodeURIComponent('Hyundai Creta vs Kia Seltos vs Maruti Brezza — Full comparison on Autowider!');
+    var url = encodeURIComponent(window.location.href);
+    window.open('https://twitter.com/intent/tweet?text=' + text + '&url=' + url, '_blank', 'width=600,height=400');
+  }
+
+  function shareWhatsApp() {
+    var text = encodeURIComponent('Check out this detailed comparison of Creta vs Seltos vs Brezza on Autowider: ' + window.location.href);
+    window.open('https://wa.me/?text=' + text, '_blank');
+  }
+
+  function copyLink() {
+    navigator.clipboard.writeText(window.location.href).then(function () {
+      var btn = document.getElementById('copy-link-btn');
+      var txt = document.getElementById('copy-link-text');
+      txt.textContent = 'Copied!';
+      btn.classList.add('bg-green-100', 'border-green-300', 'text-green-700');
+      btn.classList.remove('bg-slate-100', 'border-slate-200', 'text-slate-700');
+      setTimeout(function () {
+        txt.textContent = 'Copy Link';
+        btn.classList.remove('bg-green-100', 'border-green-300', 'text-green-700');
+        btn.classList.add('bg-slate-100', 'border-slate-200', 'text-slate-700');
+      }, 2500);
+    }).catch(function () {
+      // Fallback for older browsers
+      var input = document.createElement('input');
+      input.value = window.location.href;
+      document.body.appendChild(input);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+      document.getElementById('copy-link-text').textContent = 'Copied!';
+      setTimeout(function () {
+        document.getElementById('copy-link-text').textContent = 'Copy Link';
+      }, 2500);
+    });
+  }
+
+  // --- 6. Animate progress bars on scroll ---
+  (function () {
+    var bars = document.querySelectorAll('.progress-bar-fill');
+    var widths = [];
+    bars.forEach(function (bar) {
+      widths.push(bar.style.width);
+      bar.style.width = '0%';
+    });
+
+    var animated = false;
+    function animateBars() {
+      if (animated) return;
+      var ratingsSection = document.querySelector('.progress-bar-fill');
+      if (!ratingsSection) return;
+      var rect = ratingsSection.closest('section') ? ratingsSection.closest('section').getBoundingClientRect() : null;
+      if (rect && rect.top < window.innerHeight - 50) {
+        animated = true;
+        bars.forEach(function (bar, i) {
+          setTimeout(function () {
+            bar.style.width = widths[i];
+          }, i * 60);
+        });
+      }
+    }
+
+    window.addEventListener('scroll', animateBars, { passive: true });
+    // Also try on load
+    setTimeout(animateBars, 400);
+  })();
+</script>
+
+</body>
+</html>
