@@ -2,27 +2,364 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Autowider – Real Car Prices, Specs & Comparisons India">
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-    <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm text-center">
-      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-red-50 text-[#E63946] mb-4">
-        ★ Astro 7 + Cloudflare Pages Engine Active
-      </span>
-      <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight">
-        Welcome to Auto<span class="text-[#E63946]">wider</span>.com
-      </h1>
-      <p class="text-slate-600 text-base max-w-2xl mx-auto mt-3">
-        India's modern automotive portal. Compare cars, read real specs, check on-road prices, and stay ahead with breaking auto news.
-      </p>
+<Layout title="Autowider – India's Most Trusted Automotive Guide">
+  
+  <!-- ── Top Leaderboard Ad Slot ── -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4">
+    <div class="ad-box w-full h-[90px] rounded-xl flex items-center justify-center text-slate-400 text-xs font-medium">
+      Leaderboard Ad Space (728x90 / Responsive Display)
+    </div>
+  </div>
 
-      <div class="flex justify-center gap-4 mt-6">
-        <a href="/compare-cars" class="bg-[#E63946] hover:bg-red-600 text-white font-semibold px-6 py-3 rounded-xl transition shadow-md shadow-red-500/20 text-sm">
-          Launch Comparison Engine
-        </a>
-        <a href="/cars" class="bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold px-6 py-3 rounded-xl transition text-sm">
-          Browse All Cars
+  <!-- ── Hero Section ── -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white p-8 sm:p-14 border border-slate-800 shadow-2xl">
+      <!-- Glow effect -->
+      <div class="absolute -right-20 -top-20 w-96 h-96 bg-red-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-2xl relative z-10 space-y-5">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-red-500/10 text-red-400 border border-red-500/20">
+          ★ Autowider 2026 Automotive Intelligence
+        </span>
+        <h1 class="text-4xl sm:text-6xl font-black tracking-tight leading-tight">
+          Find Your <span class="text-[#E63946]">Perfect Car</span>.
+        </h1>
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+          Compare 200+ cars with real-time on-road prices, tested city & highway mileage, variant showdowns, and unbiased expert reviews.
+        </p>
+
+        <!-- Search Bar -->
+        <div class="pt-2 flex flex-col sm:flex-row gap-3">
+          <div class="relative flex-1">
+            <input 
+              type="text" 
+              placeholder="Search by car, brand, or body type (e.g. Creta, SUV, Electric)..." 
+              class="w-full bg-slate-800/80 border border-slate-700 text-white text-sm rounded-xl px-4 py-3.5 pl-11 focus:outline-none focus:border-[#E63946] focus:ring-1 focus:ring-[#E63946] transition placeholder:text-slate-500"
+            />
+            <svg class="w-5 h-5 text-slate-400 absolute left-3.5 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </div>
+          <a href="/compare-cars" class="bg-[#E63946] hover:bg-red-600 text-white font-bold px-6 py-3.5 rounded-xl text-center text-sm transition shadow-lg shadow-red-500/20">
+            Compare Cars
+          </a>
+        </div>
+
+        <!-- Quick Tags -->
+        <div class="flex items-center gap-2 flex-wrap text-xs text-slate-400 pt-2">
+          <span class="font-semibold text-slate-300">Trending Searches:</span>
+          <a href="/hyundai-cars/creta" class="hover:text-white underline">Hyundai Creta</a>
+          <span>•</span>
+          <a href="/compare-cars/creta-vs-seltos" class="hover:text-white underline">Creta vs Seltos</a>
+          <span>•</span>
+          <a href="/tata-cars/nexon" class="hover:text-white underline">Tata Nexon</a>
+          <span>•</span>
+          <a href="/best-suv-cars" class="hover:text-white underline">Best SUVs Under 15L</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Trending Cars Section ── -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="flex items-center justify-between mb-6">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Trending Cars in India</h2>
+        <p class="text-xs sm:text-sm text-slate-500 mt-1">Most searched and researched compact SUVs & sedans this week</p>
+      </div>
+      <a href="/cars" class="text-xs sm:text-sm text-[#E63946] font-bold hover:underline flex items-center gap-1">
+        View All 200+ Cars →
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Car Card 1: Hyundai Creta -->
+      <div class="car-card-hover bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm flex flex-col justify-between">
+        <div class="p-5">
+          <!-- Car Silhouette Area -->
+          <div class="w-full h-36 rounded-xl flex items-center justify-center p-3 relative overflow-hidden" style="background: radial-gradient(circle, #334155 0%, #0F172A 100%);">
+            <span class="absolute top-2.5 left-2.5 text-[10px] font-bold bg-[#E63946] text-white px-2 py-0.5 rounded-full">
+              #1 Bestseller
+            </span>
+            <svg viewBox="0 0 300 120" fill="none" class="w-full h-auto drop-shadow-lg">
+              <path d="M35,80 C45,80 55,70 70,55 C90,35 125,28 175,28 C210,28 230,38 245,53 C265,60 280,68 285,83 C288,90 280,93 265,93 C260,93 255,80 240,80 C225,80 220,93 180,93 C160,93 120,93 100,93 C95,93 90,80 75,80 C60,80 55,93 30,93 C20,93 15,88 18,80 Z" fill="#E2E8F0"/>
+              <circle cx="75" cy="88" r="16" fill="#0F172A" stroke="#94A3B8" stroke-width="3"/>
+              <circle cx="240" cy="88" r="16" fill="#0F172A" stroke="#94A3B8" stroke-width="3"/>
+            </svg>
+          </div>
+
+          <div class="mt-4">
+            <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Hyundai</span>
+            <h3 class="text-lg font-bold text-slate-900 mt-0.5">Creta 2026</h3>
+            <div class="text-xs text-slate-500 mt-1">17.4 - 21.8 kmpl • Petrol / Diesel</div>
+            
+            <div class="mt-3 flex items-baseline justify-between">
+              <div>
+                <div class="text-[11px] text-slate-400 uppercase font-semibold">Ex-Showroom</div>
+                <div class="text-base font-black text-slate-900">₹ 11.00 - 20.15 L</div>
+              </div>
+              <div class="flex items-center text-xs font-bold text-green-700 bg-green-50 px-2 py-0.5 rounded">
+                4.6 ★
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-4 bg-slate-50 border-t border-slate-100 flex items-center gap-2">
+          <a href="/hyundai-cars/creta" class="flex-1 text-center bg-[#E63946] hover:bg-red-600 text-white text-xs font-bold py-2.5 rounded-xl transition">
+            View Details
+          </a>
+          <a href="/compare-cars/creta-vs-seltos" class="flex-1 text-center bg-white border border-slate-200 hover:bg-slate-100 text-slate-700 text-xs font-bold py-2.5 rounded-xl transition">
+            Compare
+          </a>
+        </div>
+      </div>
+
+      <!-- Car Card 2: Kia Seltos -->
+      <div class="car-card-hover bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm flex flex-col justify-between">
+        <div class="p-5">
+          <div class="w-full h-36 rounded-xl flex items-center justify-center p-3 relative overflow-hidden" style="background: radial-gradient(circle, #1E293B 0%, #0F172A 100%);">
+            <span class="absolute top-2.5 left-2.5 text-[10px] font-bold bg-blue-600 text-white px-2 py-0.5 rounded-full">
+              High Tech
+            </span>
+            <svg viewBox="0 0 300 120" fill="none" class="w-full h-auto drop-shadow-lg">
+              <path d="M35,80 C45,80 55,70 70,55 C90,35 125,28 175,28 C210,28 230,38 245,53 C265,60 280,68 285,83 C288,90 280,93 265,93 C260,93 255,80 240,80 C225,80 220,93 180,93 C160,93 120,93 100,93 C95,93 90,80 75,80 C60,80 55,93 30,93 C20,93 15,88 18,80 Z" fill="#94A3B8"/>
+              <circle cx="75" cy="88" r="16" fill="#0F172A" stroke="#CBD5E1" stroke-width="3"/>
+              <circle cx="240" cy="88" r="16" fill="#0F172A" stroke="#CBD5E1" stroke-width="3"/>
+            </svg>
+          </div>
+
+          <div class="mt-4">
+            <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Kia</span>
+            <h3 class="text-lg font-bold text-slate-900 mt-0.5">Seltos Facelift</h3>
+            <div class="text-xs text-slate-500 mt-1">17.0 - 20.7 kmpl • Level 2 ADAS</div>
+            
+            <div class="mt-3 flex items-baseline justify-between">
+              <div>
+                <div class="text-[11px] text-slate-400 uppercase font-semibold">Ex-Showroom</div>
+                <div class="text-base font-black text-slate-900">₹ 10.90 - 20.35 L</div>
+              </div>
+              <div class="flex items-center text-xs font-bold text-green-700 bg-green-50 px-2 py-0.5 rounded">
+                4.5 ★
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-4 bg-slate-50 border-t border-slate-100 flex items-center gap-2">
+          <a href="/kia-cars/seltos" class="flex-1 text-center bg-[#E63946] hover:bg-red-600 text-white text-xs font-bold py-2.5 rounded-xl transition">
+            View Details
+          </a>
+          <a href="/compare-cars/creta-vs-seltos" class="flex-1 text-center bg-white border border-slate-200 hover:bg-slate-100 text-slate-700 text-xs font-bold py-2.5 rounded-xl transition">
+            Compare
+          </a>
+        </div>
+      </div>
+
+      <!-- Car Card 3: Tata Nexon -->
+      <div class="car-card-hover bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm flex flex-col justify-between">
+        <div class="p-5">
+          <div class="w-full h-36 rounded-xl flex items-center justify-center p-3 relative overflow-hidden" style="background: radial-gradient(circle, #334155 0%, #111827 100%);">
+            <span class="absolute top-2.5 left-2.5 text-[10px] font-bold bg-green-600 text-white px-2 py-0.5 rounded-full">
+              5-Star Safety
+            </span>
+            <svg viewBox="0 0 300 120" fill="none" class="w-full h-auto drop-shadow-lg">
+              <path d="M35,80 C45,80 55,70 70,55 C90,35 125,28 175,28 C210,28 230,38 245,53 C265,60 280,68 285,83 C288,90 280,93 265,93 C260,93 255,80 240,80 C225,80 220,93 180,93 C160,93 120,93 100,93 C95,93 90,80 75,80 C60,80 55,93 30,93 C20,93 15,88 18,80 Z" fill="#CBD5E1"/>
+              <circle cx="75" cy="88" r="16" fill="#0F172A" stroke="#94A3B8" stroke-width="3"/>
+              <circle cx="240" cy="88" r="16" fill="#0F172A" stroke="#94A3B8" stroke-width="3"/>
+            </svg>
+          </div>
+
+          <div class="mt-4">
+            <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Tata</span>
+            <h3 class="text-lg font-bold text-slate-900 mt-0.5">Nexon</h3>
+            <div class="text-xs text-slate-500 mt-1">17.0 - 24.1 kmpl • Petrol / Diesel / EV</div>
+            
+            <div class="mt-3 flex items-baseline justify-between">
+              <div>
+                <div class="text-[11px] text-slate-400 uppercase font-semibold">Ex-Showroom</div>
+                <div class="text-base font-black text-slate-900">₹ 8.15 - 15.80 L</div>
+              </div>
+              <div class="flex items-center text-xs font-bold text-green-700 bg-green-50 px-2 py-0.5 rounded">
+                4.7 ★
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-4 bg-slate-50 border-t border-slate-100 flex items-center gap-2">
+          <a href="/tata-cars/nexon" class="flex-1 text-center bg-[#E63946] hover:bg-red-600 text-white text-xs font-bold py-2.5 rounded-xl transition">
+            View Details
+          </a>
+          <a href="/compare-cars" class="flex-1 text-center bg-white border border-slate-200 hover:bg-slate-100 text-slate-700 text-xs font-bold py-2.5 rounded-xl transition">
+            Compare
+          </a>
+        </div>
+      </div>
+
+      <!-- Car Card 4: Maruti Brezza -->
+      <div class="car-card-hover bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm flex flex-col justify-between">
+        <div class="p-5">
+          <div class="w-full h-36 rounded-xl flex items-center justify-center p-3 relative overflow-hidden" style="background: radial-gradient(circle, #475569 0%, #0F172A 100%);">
+            <span class="absolute top-2.5 left-2.5 text-[10px] font-bold bg-amber-600 text-white px-2 py-0.5 rounded-full">
+              High Mileage
+            </span>
+            <svg viewBox="0 0 300 120" fill="none" class="w-full h-auto drop-shadow-lg">
+              <path d="M35,80 C45,80 55,70 70,55 C90,35 125,28 175,28 C210,28 230,38 245,53 C265,60 280,68 285,83 C288,90 280,93 265,93 C260,93 255,80 240,80 C225,80 220,93 180,93 C160,93 120,93 100,93 C95,93 90,80 75,80 C60,80 55,93 30,93 C20,93 15,88 18,80 Z" fill="#E2E8F0"/>
+              <circle cx="75" cy="88" r="16" fill="#0F172A" stroke="#94A3B8" stroke-width="3"/>
+              <circle cx="240" cy="88" r="16" fill="#0F172A" stroke="#94A3B8" stroke-width="3"/>
+            </svg>
+          </div>
+
+          <div class="mt-4">
+            <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Maruti Suzuki</span>
+            <h3 class="text-lg font-bold text-slate-900 mt-0.5">Brezza</h3>
+            <div class="text-xs text-slate-500 mt-1">19.8 - 25.5 km/kg • Petrol / CNG</div>
+            
+            <div class="mt-3 flex items-baseline justify-between">
+              <div>
+                <div class="text-[11px] text-slate-400 uppercase font-semibold">Ex-Showroom</div>
+                <div class="text-base font-black text-slate-900">₹ 8.34 - 14.14 L</div>
+              </div>
+              <div class="flex items-center text-xs font-bold text-green-700 bg-green-50 px-2 py-0.5 rounded">
+                4.4 ★
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-4 bg-slate-50 border-t border-slate-100 flex items-center gap-2">
+          <a href="/maruti-suzuki-cars/brezza" class="flex-1 text-center bg-[#E63946] hover:bg-red-600 text-white text-xs font-bold py-2.5 rounded-xl transition">
+            View Details
+          </a>
+          <a href="/compare-cars" class="flex-1 text-center bg-white border border-slate-200 hover:bg-slate-100 text-slate-700 text-xs font-bold py-2.5 rounded-xl transition">
+            Compare
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Quick Comparison Section ── -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="bg-gradient-to-r from-slate-900 to-slate-800 rounded-3xl p-8 sm:p-10 text-white border border-slate-700 shadow-xl">
+      <div class="max-w-3xl mb-8">
+        <span class="text-xs font-bold text-red-400 uppercase tracking-wider">Head-to-Head Comparison</span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight mt-1">Compare Cars Side-by-Side</h2>
+        <p class="text-slate-300 text-xs sm:text-sm mt-2">
+          Pick any two vehicles to instantly view price differences, power showdown, safety gear, and spec winner highlights.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-12 gap-4 items-center">
+        <!-- Dropdown 1 -->
+        <div class="sm:col-span-5">
+          <label class="block text-xs font-semibold text-slate-300 mb-1.5 uppercase">Select First Car</label>
+          <select class="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#E63946]">
+            <option selected>Hyundai Creta (₹11.00 - 20.15 L)</option>
+            <option>Tata Nexon (₹8.15 - 15.80 L)</option>
+            <option>Kia Seltos (₹10.90 - 20.35 L)</option>
+            <option>Maruti Brezza (₹8.34 - 14.14 L)</option>
+          </select>
+        </div>
+
+        <!-- VS Circle -->
+        <div class="sm:col-span-2 text-center flex justify-center py-2 sm:py-0">
+          <div class="w-12 h-12 rounded-full bg-[#E63946] flex items-center justify-center font-black text-sm text-white shadow-lg shadow-red-500/30">
+            VS
+          </div>
+        </div>
+
+        <!-- Dropdown 2 -->
+        <div class="sm:col-span-5">
+          <label class="block text-xs font-semibold text-slate-300 mb-1.5 uppercase">Select Second Car</label>
+          <select class="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#E63946]">
+            <option>Hyundai Creta (₹11.00 - 20.15 L)</option>
+            <option selected>Kia Seltos (₹10.90 - 20.35 L)</option>
+            <option>Tata Nexon (₹8.15 - 15.80 L)</option>
+            <option>Maruti Grand Vitara (₹10.80 - 20.09 L)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mt-6 flex justify-end">
+        <a href="/compare-cars/creta-vs-seltos" class="w-full sm:w-auto bg-[#E63946] hover:bg-red-600 text-white font-bold px-8 py-3.5 rounded-xl text-center text-sm transition shadow-lg shadow-red-500/30">
+          Compare Now →
         </a>
       </div>
     </div>
-  </main>
+  </section>
+
+  <!-- ── Latest News Grid ── -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="flex items-center justify-between mb-6">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Latest Auto News & Launches</h2>
+        <p class="text-xs sm:text-sm text-slate-500 mt-1">Real-time reports, price hikes, spy shots, and verified automotive scoops</p>
+      </div>
+      <a href="/news" class="text-xs sm:text-sm text-[#E63946] font-bold hover:underline flex items-center gap-1">
+        Read All News →
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Story 1 -->
+      <a href="/news/2026-hyundai-creta-facelift-launched" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition">
+        <div class="h-48 bg-slate-900 relative overflow-hidden flex items-center justify-center p-4" style="background: linear-gradient(135deg, #1E293B, #0F172A);">
+          <span class="absolute top-3 left-3 bg-[#E63946] text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+            New Launch
+          </span>
+          <div class="text-slate-400 text-xs font-semibold">[Creta Launch Press Photo]</div>
+        </div>
+        <div class="p-5">
+          <div class="text-[11px] text-slate-400 font-medium">Nov 1, 2026 • 4 min read</div>
+          <h3 class="text-base font-bold text-slate-900 group-hover:text-[#E63946] transition mt-1.5 leading-snug">
+            2026 Hyundai Creta Facelift Officially Launched: Price Starts at ₹11.00 Lakh
+          </h3>
+          <p class="text-xs text-slate-500 mt-2 line-clamp-2">
+            Hyundai India has announced the prices for the updated Creta with standard 6 airbags and Level 2 ADAS suite across 19 trims.
+          </p>
+        </div>
+      </a>
+
+      <!-- Story 2 -->
+      <a href="/news" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition">
+        <div class="h-48 bg-slate-900 relative overflow-hidden flex items-center justify-center p-4" style="background: linear-gradient(135deg, #0F172A, #334155);">
+          <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+            EV Scoop
+          </span>
+          <div class="text-slate-400 text-xs font-semibold">[Creta EV Testing]</div>
+        </div>
+        <div class="p-5">
+          <div class="text-[11px] text-slate-400 font-medium">Oct 30, 2026 • 3 min read</div>
+          <h3 class="text-base font-bold text-slate-900 group-hover:text-[#E63946] transition mt-1.5 leading-snug">
+            Hyundai Creta EV Spied Testing Without Camouflage: Expected Range 450 km
+          </h3>
+          <p class="text-xs text-slate-500 mt-2 line-clamp-2">
+            The electric version will feature a 45kWh battery pack and rival the upcoming Maruti Suzuki eVX and Tata Curvv EV.
+          </p>
+        </div>
+      </a>
+
+      <!-- Story 3 -->
+      <a href="/news" class="group bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition">
+        <div class="h-48 bg-slate-900 relative overflow-hidden flex items-center justify-center p-4" style="background: linear-gradient(135deg, #1E293B, #111827);">
+          <span class="absolute top-3 left-3 bg-emerald-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+            Safety Report
+          </span>
+          <div class="text-slate-400 text-xs font-semibold">[Bharat NCAP Crash Test]</div>
+        </div>
+        <div class="p-5">
+          <div class="text-[11px] text-slate-400 font-medium">Oct 28, 2026 • 5 min read</div>
+          <h3 class="text-base font-bold text-slate-900 group-hover:text-[#E63946] transition mt-1.5 leading-snug">
+            Bharat NCAP Crash Test Results: 5 Popular Compact SUVs Score 5-Star Ratings
+          </h3>
+          <p class="text-xs text-slate-500 mt-2 line-clamp-2">
+            New crash safety evaluation reveals massive improvements in adult and child occupant protection standards for 2026 models.
+          </p>
+        </div>
+      </a>
+    </div>
+  </section>
+
 </Layout>
