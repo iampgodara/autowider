@@ -8,6 +8,7 @@ export default defineConfig({
   adapter: cloudflare({
     imageService: 'cloudflare',
   }),
+  session: false,
   vite: {
     plugins: [tailwindcss()],
   },
